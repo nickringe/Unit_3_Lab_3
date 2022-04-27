@@ -1,0 +1,51 @@
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class PigLatinTest {
+
+	@Test
+	void testLowercaseA() {
+		String expected = "appleway";
+		String actual = PigLatin.translate("aPPlE");
+		assertEquals(expected, actual);
+	}
+	@Test
+	void testLowercaseE() {
+		String expected = "eppleway";
+		String actual = PigLatin.translate("ePPlE");
+		assertEquals(expected, actual);
+	}
+	@Test
+	void testLowercaseI() {
+		String expected = "ippleway";
+		String actual = PigLatin.translate("iPPlE");
+		assertEquals(expected, actual);
+	}
+	@Test
+	void testLowercaseO() {
+		String expected = "oppleway";
+		String actual = PigLatin.translate("oPPlE");
+		assertEquals(expected, actual);
+	}
+	@Test
+	void testLowercaseU() {
+		String expected = "uppleway";
+		String actual = PigLatin.translate("uPPlE");
+		assertEquals(expected, actual);
+	}
+	
+	@Test
+	void testVowelStart() {
+		String expected = "ippleway";
+		String actual = PigLatin.translate("ipple");
+		assertEquals(expected, actual);
+	}
+	
+	@Test
+	void testFindVowel() {
+		String expected = "icknay";
+		String actual = PigLatin.findVowel("nick");
+		assertEquals(expected, actual);
+	}
+}
